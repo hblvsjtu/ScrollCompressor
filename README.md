@@ -132,7 +132,8 @@
         return s
 #### 2) Class：PDSim.scroll.common_scroll_geo.geoVals
 > - h 齿高
-> - ro 
+> - ro orbiting radius 公转半径 公转半径只是涡盘基圆半径和内外表面发生角的函数
+>>>>>> ![图1-3 公转半径的定义c]()
 > - rb the radius of the base circle 基圆半径
 > - t The thickness of the scroll 涡旋的厚度 t=ts = rb*(phi_i0 - phi_o0)，涡旋盘厚度通常为5毫米量级。 
 >>>>>> ![图1-1 涡旋的内外表面](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-1%20%E6%B6%A1%E6%97%8B%E7%9A%84%E5%86%85%E5%A4%96%E8%A1%A8%E9%9D%A2.png?raw=true)
@@ -149,7 +150,7 @@
 > - phi_oos Inner Starting Angle 动涡盘外部渐开线开始角
 > - phi_oo0 Inner Initial Angle 动涡盘外部渐开线发生角
 > - phi_ie_offset 初始值为0
->>>>>> ![图1-2 角度的定义]()
+>>>>>> ![图1-2 角度的定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-2%20%E8%A7%92%E5%BA%A6%E7%9A%84%E5%AE%9A%E4%B9%89.png?raw=true)
 > - copy_inplace(self, geoVals target) 结构性复制
 > - is_symmetric(self) → bool 动外部渐开线所有角度都相等的时候返回true
 > - val_if_symmetric(self, double val) → double 如果is_symmetric则返回数值，否则返回数值错误
