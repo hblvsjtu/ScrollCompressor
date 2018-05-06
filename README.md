@@ -4,7 +4,7 @@
         
 ------
         
-##目录
+## 目录
     
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
@@ -133,7 +133,7 @@
                     'delta_radial', 'delta_flank',
                     'phi_ie_offset','delta_suction_offset',
                     'cx_scroll','cy_scroll','V_scroll','Vremove']
-                    
+
     //静涡盘所有角度都相等的时候返回true
     cpdef bint is_symmetric(self):
         """
