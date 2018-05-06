@@ -1,5 +1,9 @@
-# ScrollCompressor
-开发电动涡旋压缩机一维热力学模型
+# ScrollCompressor_Study
+
+## 作者：冰红茶
+### 参考文献：[Bell I H. Theoretical and experimental analysis of liquid flooded compression in scroll compressors[J]. Dissertations & Theses - Gradworks, 2011.](https://search.proquest.com/docview/900715003)
+
+### 目的: 翻译和注释Bell I H.的博士学位论文和软件pdSIM，为后面开发电动涡旋压缩机一维热力学模型做准备
         
         
 ------
@@ -75,14 +79,21 @@
     cdef class CVInvolute:
     def __init__(self):
         pass
+    
+    // 渐开线类别
+    cdef enum involute_index:
+    INVOLUTE_FI
+    INVOLUTE_FO
+    INVOLUTE_OI
+    INVOLUTE_OO 
 #### 2) Class：PDSim.scroll.common_scroll_geo.CVInvolutes
 > - 
-> - CVInvolute Inner: 该腔室的动涡旋
-> - CVInvolute Outer: 该腔室的静涡旋
+> - CVInvolute Inner: 该腔室的内部渐开线
+> - CVInvolute Outer: 该腔室的外部渐开线
 > - Boolean has_line_1: 是否存在line #1
 > - Boolean has_line_2: 是否存在line #2
     
-    //申明动涡盘和静涡盘两种角度结构
+    //申明内部渐开线和外部渐开线两种角度结构
     cdef class CVInvolutes:
     def __init__(self):
         self.Inner = CVInvolute.__new__(CVInvolute)
@@ -103,15 +114,26 @@
         s += "has_line_2 = {i:g}".format(i=self.has_line_2)
         return s
 #### 2) Class：PDSim.scroll.common_scroll_geo.geoVals
-> - phi_ie Inner Ending Angle 动涡盘结束角
-> - phi_is Inner Starting Angle 动涡盘开始角
-> - phi_i0 Inner Initial Angle 动涡盘初始角
-> - phi_oe Inner Ending Angle 静涡盘结束角
-> - phi_os Inner Starting Angle 静涡盘开始角
-> - phi_o0 Inner Initial Angle 静涡盘初始角
+> - h 齿高
+> - ro
+> - rb the radius of the base circle 基圆半径
+> - t The thickness of the scroll 涡旋的厚度 t=ts = rb*(phi_i0 - phi_o0)，涡旋盘厚度通常为5毫米量级。 
+>>>>>> ![图1-1 涡旋的内外表面]()
+> - phi_fie Inner Ending Angle 静涡盘内部渐开线结束角
+> - phi_fis Inner Starting Angle 静涡盘内部渐开线开始角
+> - phi_fi0 Inner Initial Angle 静涡盘内部渐开线发生角
+> - phi_foe Inner Ending Angle 静涡盘外部渐开线结束角
+> - phi_fos Inner Starting Angle 静涡盘外部渐开线开始角
+> - phi_fo0 Inner Initial Angle 静涡盘外部渐开线发生角
+> - phi_oie Inner Ending Angle 动涡盘内部渐开线结束角
+> - phi_ois Inner Starting Angle 动涡盘内部渐开线开始角
+> - phi_oi0 Inner Initial Angle 动涡盘内部渐开线发生角
+> - phi_ooe Inner Ending Angle 动涡盘外部渐开线结束角
+> - phi_oos Inner Starting Angle 动涡盘外部渐开线开始角
+> - phi_oo0 Inner Initial Angle 动涡盘外部渐开线发生角
 > - phi_ie_offset 初始值为0
 > - copy_inplace(self, geoVals target) 结构性复制
-> - is_symmetric(self) → bool 动静涡盘所有角度都相等的时候返回true
+> - is_symmetric(self) → bool 动外部渐开线所有角度都相等的时候返回true
 > - val_if_symmetric(self, double val) → double 如果is_symmetric则返回数值，否则返回数值错误
 > - xvec_disc_port 属于numpy.ndarray类型
 > - yvec_disc_port 属于numpy.ndarray类型
@@ -134,7 +156,7 @@
                     'phi_ie_offset','delta_suction_offset',
                     'cx_scroll','cy_scroll','V_scroll','Vremove']
 
-    //静涡盘所有角度都相等的时候返回true
+    //外部渐开线所有角度都相等的时候返回true
     cpdef bint is_symmetric(self):
         """
         Returns true if all the angles for the fixed scroll are the same as for the orbiting scroll
@@ -206,12 +228,12 @@
         return geo.rb*geo.ro*((phi - geo.phi_oo0)*sin(THETA - phi) - cos(THETA - phi))
 #### 4) class PDSim.scroll.common_scroll_geo.HTAnglesClass
 > - 与涡旋压缩机腔室传热计算所需计算有关的角度的结构
-> - double phi_1_i 动涡盘外壁最大展开角
-> - double phi_2_i 动涡盘外壁最小展开角
-> - double phi_1_o 静涡盘内壁最大展开角
-> - double phi_2_o 静涡盘内壁最小展开角
-> - double phi_i0 动涡盘外壁原始展开角
-> - double phi_o0 静涡盘内壁原始展开角
+> - double phi_1_i 内部渐开线外壁最大展开角
+> - double phi_2_i 内部渐开线外壁最小展开角
+> - double phi_1_o 外部渐开线内壁最大展开角
+> - double phi_2_o 外部渐开线内壁最小展开角
+> - double phi_i0 内部渐开线外壁原始展开角
+> - double phi_o0 外部渐开线内壁原始展开角
         
     cdef class HTAnglesClass:
     def __repr__(self):
@@ -290,7 +312,7 @@
     VdV.dV = dV
     return VdV
 #### 6) class PDSim.scroll.common_scroll_geo.coords_inv
-> - 对应于沿着渐开线（静涡旋盘内部[fi]，静涡旋盘外部渐开线[fo]，动涡旋外部渐开线[oo]和动涡旋内部渐开线[oi]）的点的渐开线角度
+> - 对应于沿着渐开线（外部渐开线盘内部[fi]，外部渐开线盘外部渐开线[fo]，内部渐开线外部渐开线[oo]和内部渐开线内部渐开线[oi]）的点的渐开线角度
 > - coords_inv(phi, geoVals geo, double theta, flag='fi') → tuple
 > - phi_vec – 渐开线角度的一维数字数组或双精度矢量
 > - geo – geoVals class scroll compressor geometry
