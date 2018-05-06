@@ -149,7 +149,7 @@
 > - phi_oos Inner Starting Angle 动涡盘外部渐开线开始角
 > - phi_oo0 Inner Initial Angle 动涡盘外部渐开线发生角
 > - phi_ie_offset 初始值为0
->>>>>> ![图1-2 角度的定义]()
+>>>>>> ![图1-2 角度的定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-2%20%E8%A7%92%E5%BA%A6%E7%9A%84%E5%AE%9A%E4%B9%89.png?raw=true)
 > - copy_inplace(self, geoVals target) 结构性复制
 > - is_symmetric(self) → bool 动外部渐开线所有角度都相等的时候返回true
 > - val_if_symmetric(self, double val) → double 如果is_symmetric则返回数值，否则返回数值错误
