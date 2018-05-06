@@ -70,7 +70,7 @@
 > - theta: 曲轴转角
 > - double phi_max: 沿渐开线的最大展开角
 > - double phi_min: 沿渐开线的最小展开角
-> - double phi_0： 沿着这个渐开线的初始展开角度
+> - double phi_0： 沿着这个渐开线发生角
 > - double dphi_max_dtheta: 沿渐开线的最大展开角对曲轴转角θ的导数
 > - double dphi_min_dtheta: 沿渐开线的最小展开角对曲轴转角θ的导数 
 > - involute_index(类名) involute: 渐开线的渐开线指数
@@ -85,7 +85,24 @@
     INVOLUTE_FI
     INVOLUTE_FO
     INVOLUTE_OI
-    INVOLUTE_OO 
+    INVOLUTE_OO
+
+    // 渐开线类别返回字符串
+    cpdef bytes involute_index_to_key(int index):
+    """
+    Return the string associated with a given index from the common_scroll_geo.involute_index enumeration
+    """
+    
+    if index == INVOLUTE_FI:
+        return bytes('fi')
+    elif index == INVOLUTE_FO:
+        return bytes('fo')
+    elif index == INVOLUTE_OI:
+        return bytes('oi')
+    elif index == INVOLUTE_OO:
+        return bytes('oo')
+    else:
+        return bytes('') 
 #### 2) Class：PDSim.scroll.common_scroll_geo.CVInvolutes
 > - 
 > - CVInvolute Inner: 该腔室的内部渐开线
@@ -115,10 +132,10 @@
         return s
 #### 2) Class：PDSim.scroll.common_scroll_geo.geoVals
 > - h 齿高
-> - ro
+> - ro 
 > - rb the radius of the base circle 基圆半径
 > - t The thickness of the scroll 涡旋的厚度 t=ts = rb*(phi_i0 - phi_o0)，涡旋盘厚度通常为5毫米量级。 
->>>>>> ![图1-1 涡旋的内外表面]()
+>>>>>> ![图1-1 涡旋的内外表面](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-1%20%E6%B6%A1%E6%97%8B%E7%9A%84%E5%86%85%E5%A4%96%E8%A1%A8%E9%9D%A2.png?raw=true)
 > - phi_fie Inner Ending Angle 静涡盘内部渐开线结束角
 > - phi_fis Inner Starting Angle 静涡盘内部渐开线开始角
 > - phi_fi0 Inner Initial Angle 静涡盘内部渐开线发生角
@@ -132,6 +149,7 @@
 > - phi_oos Inner Starting Angle 动涡盘外部渐开线开始角
 > - phi_oo0 Inner Initial Angle 动涡盘外部渐开线发生角
 > - phi_ie_offset 初始值为0
+>>>>>> ![图1-2 角度的定义]()
 > - copy_inplace(self, geoVals target) 结构性复制
 > - is_symmetric(self) → bool 动外部渐开线所有角度都相等的时候返回true
 > - val_if_symmetric(self, double val) → double 如果is_symmetric则返回数值，否则返回数值错误
