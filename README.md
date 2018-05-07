@@ -9,7 +9,10 @@
 ------
         
 ## 目录
-    
+        
+### [零、前期准备知识](#0)
+#### [0.1 坐标变换](#0.1)   
+
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
 #### [1.2 PDSim.core.callbacks module](#1.2)
@@ -61,6 +64,18 @@
         
 ------
     
+<h2 id='0'>零、前期准备知识</h2>
+<h3 id='0.1'>0.1 坐标变换</h3> 
+        
+#### 1) 平移变换和旋转变换
+>>>>>> ![图1-4 坐标变换new](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-4%20%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2new.png?raw=true)
+>>>>>> ![图1-5 静涡盘各点坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-5%20%E9%9D%99%E6%B6%A1%E7%9B%98%E5%90%84%E7%82%B9%E5%9D%90%E6%A0%87.png?raw=true)
+>>>>>> ![图1-7 坐标变换过程](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-7%20%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E8%BF%87%E7%A8%8B.png?raw=true)
+        
+> - 所以从表达式中我们可以看到动涡盘的第一项都是负的
+        
+>>>>>> ![图1-6 动涡盘各点坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-6%20%E5%8A%A8%E6%B6%A1%E7%9B%98%E5%90%84%E7%82%B9%E5%9D%90%E6%A0%87.png?raw=true)
+
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
 
@@ -133,7 +148,7 @@
 #### 2) Class：PDSim.scroll.common_scroll_geo.geoVals
 > - h 齿高
 > - ro orbiting radius 公转半径 公转半径只是涡盘基圆半径和内外表面发生角的函数
->>>>>> ![图1-3 公转半径的定义c]()
+>>>>>> ![图1-3 公转半径的定义c](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-3%20%E5%85%AC%E8%BD%AC%E5%8D%8A%E5%BE%84%E7%9A%84%E5%AE%9A%E4%B9%89c.png?raw=true)
 > - rb the radius of the base circle 基圆半径
 > - t The thickness of the scroll 涡旋的厚度 t=ts = rb*(phi_i0 - phi_o0)，涡旋盘厚度通常为5毫米量级。 
 >>>>>> ![图1-1 涡旋的内外表面](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-1%20%E6%B6%A1%E6%97%8B%E7%9A%84%E5%86%85%E5%A4%96%E8%A1%A8%E9%9D%A2.png?raw=true)
