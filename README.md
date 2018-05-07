@@ -72,9 +72,17 @@
 >>>>>> ![图1-5 静涡盘各点坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-5%20%E9%9D%99%E6%B6%A1%E7%9B%98%E5%90%84%E7%82%B9%E5%9D%90%E6%A0%87.png?raw=true)
 >>>>>> ![图1-7 坐标变换过程](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-7%20%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E8%BF%87%E7%A8%8B.png?raw=true)
         
-> - 所以从表达式中我们可以看到动涡盘的第一项都是负的
+> - 所以从表达式中我们可以看到动涡盘的第一项都是负的，至于为什么第二项还有一个Δθ呢？这是因为保证在一开始装配的时候就能保持啮合的状态
         
 >>>>>> ![图1-6 动涡盘各点坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-6%20%E5%8A%A8%E6%B6%A1%E7%9B%98%E5%90%84%E7%82%B9%E5%9D%90%E6%A0%87.png?raw=true)
+                
+#### 2) 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角
+> - 所以应该则么求Δθ呢？可以在初始状态的时候，使θ=0，动静涡盘在φie下啮合
+    
+>>>>>> ![图1-8 动涡盘待定系数求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-8%20%E5%8A%A8%E6%B6%A1%E7%9B%98%E5%BE%85%E5%AE%9A%E7%B3%BB%E6%95%B0%E6%B1%82%E8%A7%A3.png?raw=true)
+    
+> - 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角
+    theta_m = geo.phi_fie - theta + 3.0*pi/2.0 = geo.phi_fie - theta - pi/2.0
 
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
@@ -213,6 +221,8 @@
     
         Gr \\equiv \\int\\left[\\left(-y\\frac{dx(\\phi)}{d\\phi}+x\\frac{dy(\\phi)}{d\\phi}\\right)d\\phi\\right]
     """
+
+    //求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角
     theta_m = geo.phi_fie - theta + 3.0*pi/2.0
     if inv == INVOLUTE_FI:
         return phi*geo.rb**2*(phi**2 - 3*phi*geo.phi_fi0 + 3*geo.phi_fi0**2)/3
