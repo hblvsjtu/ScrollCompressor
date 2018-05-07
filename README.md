@@ -14,7 +14,8 @@
 #### [0.1 坐标变换](#0.1)   
 #### [0.2 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角](#0.2)
 #### [0.3 啮合角求解](#0.3) 
-
+#### [0.4 排气角](#0.4) 
+    
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
 #### [1.2 PDSim.core.callbacks module](#1.2)
@@ -96,8 +97,10 @@
         
 <h3 id='0.4'>0.4 排气角</h3> 
     
-#### 1) 排气角不充分条件1
->>>>>> ![图1-10 排气角条件1](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B61.png?raw=true)
+#### 1) 排气角不充分条件和最大腔室对数
+>>>>>> ![图1-10 排气角条件](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B6.png?raw=true)
+#### 2) 然后利用该不充分条件和最大腔室对数计算排气角
+> - >>>>>> ![图1-10 排气角条件2](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)
 
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
