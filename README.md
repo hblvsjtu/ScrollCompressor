@@ -14,7 +14,7 @@
 #### [0.1 坐标变换](#0.1)   
 #### [0.2 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角](#0.2)
 #### [0.3 啮合角求解](#0.3) 
-          
+
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
 #### [1.2 PDSim.core.callbacks module](#1.2)
@@ -74,6 +74,7 @@
 >>>>>> ![图1-5 静涡盘各点坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-5%20%E9%9D%99%E6%B6%A1%E7%9B%98%E5%90%84%E7%82%B9%E5%9D%90%E6%A0%87.png?raw=true)
 >>>>>> ![图1-7 坐标变换过程](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-7%20%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E8%BF%87%E7%A8%8B.png?raw=true)
         
+> - 展开角逆时针为正
 > - 所以从表达式中我们可以看到动涡盘的第一项都是负的，至于为什么第二项还有一个Δθ呢？这是因为保证在一开始装配的时候就能保持啮合的状态
         
 >>>>>> ![图1-6 动涡盘各点坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-6%20%E5%8A%A8%E6%B6%A1%E7%9B%98%E5%90%84%E7%82%B9%E5%9D%90%E6%A0%87.png?raw=true)
@@ -93,6 +94,10 @@
 #### 1) 啮合角求解
 >>>>>> ![图1-9 各啮合点展开角计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-9%20%E5%90%84%E5%95%AE%E5%90%88%E7%82%B9%E5%B1%95%E5%BC%80%E8%A7%92%E8%AE%A1%E7%AE%97.png?raw=true)
         
+<h3 id='0.4'>0.4 排气角</h3> 
+    
+#### 1) 排气角不充分条件1
+>>>>>> ![图1-10 排气角条件1](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B61.png?raw=true)
 
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
