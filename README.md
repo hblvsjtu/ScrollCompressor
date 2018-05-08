@@ -115,7 +115,16 @@
 >>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%83.png?raw=true)
     
         
-<h3 id='0.6'>0.6 气体力的推导</h3> 
+<h3 id='0.6'>0.6 气体力与力矩的推导</h3> 
+        
+> - 曲线单位法向量的推导
+>>>>>> ![图1-14 单位法向量](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-14%20%E5%8D%95%E4%BD%8D%E6%B3%95%E5%90%91%E9%87%8F.png?raw=true)
+> - 单位气体力方向的推导
+>>>>>> ![图1-15 单位气体力方向的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
+> - 气体力的推导
+>>>>>> ![图1-17 气体力推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
+> - 气体力矩方向的推导
+>>>>>> ![图1-18 力矩推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
     
 #### 1) 三角形和曲线面元的推导
 > - 
