@@ -16,7 +16,8 @@
 #### [0.3 啮合角求解](#0.3) 
 #### [0.4 排气角](#0.4) 
 #### [0.5 面积和质心的推导](#0.5)
-    
+#### [0.6 气体力的推导](#0.6)
+
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
 #### [1.2 PDSim.core.callbacks module](#1.2)
@@ -111,7 +112,13 @@
 > - 图中φ1和φ2的位置错了，应该是逆时针布置才对，遵循右手定律
 >>>>>> ![图1-11 三角形和曲线面元的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
 #### 2) 质心的推导
->>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true) 
+>>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%83.png?raw=true)
+    
+        
+<h3 id='0.6'>0.6 气体力的推导</h3> 
+    
+#### 1) 三角形和曲线面元的推导
+> - 
 
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
