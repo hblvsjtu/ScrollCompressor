@@ -111,9 +111,14 @@
 #### 1) 三角形和曲线面元的推导
 > - 图中φ1和φ2的位置错了，应该是逆时针布置才对，遵循右手定律
 >>>>>> ![图1-11 三角形和曲线面元的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
+> - 吸入腔静涡旋面积体积计算
+>>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
 #### 2) 质心的推导
+> - 扇形质心在r的2/3位置
 >>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%83.png?raw=true)
-    
+> - 吸入腔静涡旋质心计算 以及密度偏移，要注意的一点是求质心坐标的时候，分子里面的坐标要求是微元的重心坐标，对于矩形微元而言重心坐标即在其中心，但是在扇形微元的时候，重心在其半径的2/3处的地方，造成了所谓的“密度偏移”
+>>>>>> ![图1-20 吸入腔静涡旋质心计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%83.png?raw=true)
+   
         
 <h3 id='0.6'>0.6 气体力与力矩的推导</h3> 
         
@@ -122,9 +127,9 @@
 > - 单位气体力方向的推导
 >>>>>> ![图1-15 单位气体力方向的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
 > - 气体力的推导
->>>>>> ![图1-17 气体力推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
-> - 气体力矩方向的推导
->>>>>> ![图1-18 力矩推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
+>>>>>> ![图1-17 气体力推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-17%20%E6%B0%94%E4%BD%93%E5%8A%9B%E6%8E%A8%E5%AF%BC.png?raw=true)
+> - 气体力矩方向的推导 中间是叉乘，rO is a vector from (xO, yO)，φie-pi/2之前也讲过，是动涡盘和曲柄销的安装角度
+>>>>>> ![图1-18 力矩推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-18%20%E5%8A%9B%E7%9F%A9%E6%8E%A8%E5%AF%BC.png?raw=true)
     
 #### 1) 三角形和曲线面元的推导
 > - 
