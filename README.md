@@ -105,14 +105,11 @@
 > - floor()函数代表向下取整
 >>>>>> ![图1-10 排气角条件2](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)
 #### 2) 吸气破入点的三种定义
->>>>>> ![图1-23 吸气破入点的三种定义1](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true) 
 > - 第一种定义：固定在动涡盘外壁面，当地展开角固定为为φie-π
->>>>>> ![图1-23 吸气破入点的三种定义2](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)  
 > - 第二种定义：固定在动涡盘外壁面，该点在静涡盘展开结束角的法线与动涡盘外壁面的交点处
->>>>>> ![图1-23 吸气破入点的三种定义3](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)  
 > - 第三种定义：固定在动涡盘外壁面，该点在静涡盘内壁面展开结束角的终点跟静涡盘基圆圆心的连线，与动涡盘外壁面的交点处
->>>>>> ![图1-23 吸气破入点的三种定义4](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)  
-   
+>>>>>> ![图1-23 吸气破入点的三种定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-23%20%E5%90%B8%E6%B0%94%E7%A0%B4%E5%85%A5%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9A%E4%B9%89.png?raw=true)
+
         
 <h3 id='0.5'>0.5 面积和质心的推导</h3> 
     
