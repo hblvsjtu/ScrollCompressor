@@ -15,7 +15,7 @@
 #### [0.2 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角](#0.2)
 #### [0.3 啮合角求解](#0.3) 
 #### [0.4 排气角](#0.4) 
-#### [0.5 面积和质心的推导](#0.5)
+#### [0.5 吸入腔面积体积质心排量计算](#0.5)
 #### [0.6 气体力的推导](#0.6)
 
 ### [一、PDSim.core package](#1)
@@ -111,7 +111,7 @@
 >>>>>> ![图1-23 吸气破入点的三种定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-23%20%E5%90%B8%E6%B0%94%E7%A0%B4%E5%85%A5%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9A%E4%B9%89.png?raw=true)
 
         
-<h3 id='0.5'>0.5 吸入腔外部面积体积质心计算</h3> 
+<h3 id='0.5'>0.5 吸入腔面积体积质心排量计算</h3> 
     
 #### 1) 三角形和曲线面元的推导
 > - 图中φ1和φ2的位置错了，应该是逆时针布置才对，遵循右手定律
@@ -127,17 +127,17 @@
 >>>>>> ![图1-20 吸入腔静涡旋质心计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
 #### 3) 吸入腔内部面积体积质心计算
 > - 吸入腔内部涡旋面积体积质心计算
->>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%AE%A1%E7%AE%97%E8%AE%A1%E7%AE%97.png?raw=true)
+>>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
 > - 吸入腔内部涡旋涡旋面积体积质心计算PartA
->>>>>> ![图1-21 内部涡旋面积体积质心计算part_a](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
+>>>>>> ![图1-21 内部涡旋面积体积质心计算part_a](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97part_a.png?raw=true)
 > - 吸入腔内部涡旋涡旋面积体积质心计算PartB
->>>>>> ![图1-21 内部涡旋面积体积质心计算part_b](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
+>>>>>> ![图1-21 内部涡旋面积体积质心计算part_b](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97part_b.png?raw=true)
 > - 吸入腔内部涡旋涡旋面积体积质心计算PartC
->>>>>> ![图1-21 内部涡旋面积体积质心计算part_c](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
+>>>>>> ![图1-21 内部涡旋面积体积质心计算part_c](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97part_c.png?raw=true)
 #### 4) 吸入腔总的面积体积质心和排量的计算
 > - 吸入腔总的面积体积质心计算
 > - 压缩机排量定义为动涡盘转一圈后的瞬间吸入腔的总体积
->>>>>> ![图1-24 吸入腔总的面积体积质心排量计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
+>>>>>> ![图1-24 吸入腔总的面积体积质心排量计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-24%20%E5%90%B8%E5%85%A5%E8%85%94%E6%80%BB%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%8E%92%E9%87%8F%E8%AE%A1%E7%AE%97.png?raw=true)
    
         
 <h3 id='0.6'>0.6 气体力与力矩的推导</h3> 
