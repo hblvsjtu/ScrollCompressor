@@ -97,14 +97,22 @@
 #### 1) 啮合角求解
 >>>>>> ![图1-9 各啮合点展开角计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-9%20%E5%90%84%E5%95%AE%E5%90%88%E7%82%B9%E5%B1%95%E5%BC%80%E8%A7%92%E8%AE%A1%E7%AE%97.png?raw=true)
         
-<h3 id='0.4'>0.4 排气角</h3> 
+<h3 id='0.4'>0.4 排气角和吸气破入点</h3> 
     
 #### 1) 排气角不充分条件和最大腔室对数
 >>>>>> ![图1-10 排气角条件](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B6.png?raw=true)
 #### 2) 然后利用该不充分条件和最大腔室对数计算排气角
 > - floor()函数代表向下取整
 >>>>>> ![图1-10 排气角条件2](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)
-    
+#### 2) 吸气破入点的三种定义
+>>>>>> ![图1-23 吸气破入点的三种定义1](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true) 
+> - 第一种定义：固定在动涡盘外壁面，当地展开角固定为为φie-π
+>>>>>> ![图1-23 吸气破入点的三种定义2](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)  
+> - 第二种定义：固定在动涡盘外壁面，该点在静涡盘展开结束角的法线与动涡盘外壁面的交点处
+>>>>>> ![图1-23 吸气破入点的三种定义3](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)  
+> - 第三种定义：固定在动涡盘外壁面，该点在静涡盘内壁面展开结束角的终点跟静涡盘基圆圆心的连线，与动涡盘外壁面的交点处
+>>>>>> ![图1-23 吸气破入点的三种定义4](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)  
+   
         
 <h3 id='0.5'>0.5 面积和质心的推导</h3> 
     
@@ -115,9 +123,9 @@
 >>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
 #### 2) 质心的推导
 > - 扇形质心在r的2/3位置
->>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%83.png?raw=true)
+>>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-19%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%AE%A1%E7%AE%97.png?raw=true)
 > - 吸入腔静涡旋质心计算 以及密度偏移，要注意的一点是求质心坐标的时候，分子里面的坐标要求是微元的重心坐标，对于矩形微元而言重心坐标即在其中心，但是在扇形微元的时候，重心在其半径的2/3处的地方，造成了所谓的“密度偏移”
->>>>>> ![图1-20 吸入腔静涡旋质心计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%83.png?raw=true)
+>>>>>> ![图1-20 吸入腔静涡旋质心计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
    
         
 <h3 id='0.6'>0.6 气体力与力矩的推导</h3> 
