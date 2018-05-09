@@ -111,18 +111,33 @@
 >>>>>> ![图1-23 吸气破入点的三种定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-23%20%E5%90%B8%E6%B0%94%E7%A0%B4%E5%85%A5%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9A%E4%B9%89.png?raw=true)
 
         
-<h3 id='0.5'>0.5 面积和质心的推导</h3> 
+<h3 id='0.5'>0.5 吸入腔外部面积体积质心计算</h3> 
     
 #### 1) 三角形和曲线面元的推导
 > - 图中φ1和φ2的位置错了，应该是逆时针布置才对，遵循右手定律
 >>>>>> ![图1-11 三角形和曲线面元的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
-> - 吸入腔静涡旋面积体积计算
->>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
 #### 2) 质心的推导
 > - 扇形质心在r的2/3位置
 >>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-19%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%AE%A1%E7%AE%97.png?raw=true)
 > - 吸入腔静涡旋质心计算 以及密度偏移，要注意的一点是求质心坐标的时候，分子里面的坐标要求是微元的重心坐标，对于矩形微元而言重心坐标即在其中心，但是在扇形微元的时候，重心在其半径的2/3处的地方，造成了所谓的“密度偏移”
+#### 3) 吸入腔外部面积体积质心计算
+> - 吸入腔外部涡旋面积体积计算
+>>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
+> - 吸入腔外部涡旋质心计算
 >>>>>> ![图1-20 吸入腔静涡旋质心计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
+#### 3) 吸入腔内部面积体积质心计算
+> - 吸入腔内部涡旋面积体积质心计算
+>>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%AE%A1%E7%AE%97%E8%AE%A1%E7%AE%97.png?raw=true)
+> - 吸入腔内部涡旋涡旋面积体积质心计算PartA
+>>>>>> ![图1-21 内部涡旋面积体积质心计算part_a](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
+> - 吸入腔内部涡旋涡旋面积体积质心计算PartB
+>>>>>> ![图1-21 内部涡旋面积体积质心计算part_b](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
+> - 吸入腔内部涡旋涡旋面积体积质心计算PartC
+>>>>>> ![图1-21 内部涡旋面积体积质心计算part_c](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
+#### 4) 吸入腔总的面积体积质心和排量的计算
+> - 吸入腔总的面积体积质心计算
+> - 压缩机排量定义为动涡盘转一圈后的瞬间吸入腔的总体积
+>>>>>> ![图1-24 吸入腔总的面积体积质心排量计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
    
         
 <h3 id='0.6'>0.6 气体力与力矩的推导</h3> 
