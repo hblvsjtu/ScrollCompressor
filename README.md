@@ -10,13 +10,22 @@
         
 ## 目录
         
-### [零、前期准备知识](#0)
-#### [0.1 坐标变换](#0.1)   
-#### [0.2 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角](#0.2)
-#### [0.3 啮合角求解](#0.3) 
-#### [0.4 排气角](#0.4) 
-#### [0.5 吸入腔面积体积质心排量计算](#0.5)
-#### [0.6 气体力的推导](#0.6)
+### [一、前期准备知识](#1)
+#### [1.1 坐标变换](#1.1)   
+#### [1.2 面积积分和质心求解](#1.2)
+#### [1.3 曲线单位法向量的推导](#1.3)
+#### [1.4 单位气体力方向的推导](#1.4)
+### [二、基本量](#2)
+#### [2.1 动静涡盘点的坐标](#2.1) 
+#### [2.2 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角](#2.2)
+#### [2.3 啮合角](#2.3) 
+#### [2.4 排气角](#2.4) 
+#### [2.5 吸气破入角](#2.5) 
+### [三、吸入腔](#3)
+#### [3.1 面积体积质心排量计算](#3.1)
+#### [3.2 吸入腔内部面积体积质心计算](#3.2)
+#### [3.3 气体力与力矩](#3.3)
+#### [3.4 吸气面积腔](#3.4)
 
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
@@ -68,12 +77,34 @@
 #### [6.7 module contents](#6.7)
         
 ------
-    
-<h2 id='0'>零、前期准备知识</h2>
-<h3 id='0.1'>0.1 坐标变换</h3> 
+        
+
+<h2 id='1'>一、前期准备知识</h2>
+<h3 id='1.1'>1.1 坐标变换</h3> 
         
 #### 1) 平移变换和旋转变换
 >>>>>> ![图1-4 坐标变换new](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-4%20%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2new.png?raw=true)
+        
+<h3 id='1.2'>1.2 面积积分和质心求解</h3> 
+
+#### 1) 三角形和曲线面元的推导
+> - 图中φ1和φ2的位置错了，应该是逆时针布置才对，遵循右手定律
+>>>>>> ![图1-11 三角形和曲线面元的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
+        
+<h3 id='1.3'>1.3 曲线单位法向量的推导</h3> 
+        
+>>>>>> ![图1-14 单位法向量](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-14%20%E5%8D%95%E4%BD%8D%E6%B3%95%E5%90%91%E9%87%8F.png?raw=true)
+        
+<h3 id='1.4'>1.4 单位气体力方向的推导</h3> 
+        
+>>>>>> ![图1-15 单位气体力方向的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
+        
+------
+        
+        
+<h2 id='2'>二、基本量</h2>
+<h3 id='2.1'>2.1 动静涡盘点的坐标</h3> 
+        
 >>>>>> ![图1-5 静涡盘各点坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-5%20%E9%9D%99%E6%B6%A1%E7%9B%98%E5%90%84%E7%82%B9%E5%9D%90%E6%A0%87.png?raw=true)
 >>>>>> ![图1-7 坐标变换过程](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-7%20%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E8%BF%87%E7%A8%8B.png?raw=true)
         
@@ -81,8 +112,8 @@
 > - 所以从表达式中我们可以看到动涡盘的第一项都是负的，至于为什么第二项还有一个Δθ呢？这是因为保证在一开始装配的时候就能保持啮合的状态
         
 >>>>>> ![图1-6 动涡盘各点坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-6%20%E5%8A%A8%E6%B6%A1%E7%9B%98%E5%90%84%E7%82%B9%E5%9D%90%E6%A0%87.png?raw=true)
-        
-<h3 id='0.2'>0.2 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角</h3> 
+     
+<h3 id='2.2'>2.2 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角</h3> 
                 
 #### 1) 求解求Δθ
 > - 所以应该则么求Δθ呢？可以在初始状态的时候，使θ=0，动静涡盘在φie下啮合
@@ -92,68 +123,76 @@
 > - 求解关于初始装配条件下待定系数后的动涡盘等效曲柄转角
     theta_m = geo.phi_fie - theta + 3.0*pi/2.0 = geo.phi_fie - theta - pi/2.0
         
-<h3 id='0.3'>0.3 啮合角求解</h3> 
+<h3 id='2.3'>2.3 啮合角求解</h3> 
     
 #### 1) 啮合角求解
 >>>>>> ![图1-9 各啮合点展开角计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-9%20%E5%90%84%E5%95%AE%E5%90%88%E7%82%B9%E5%B1%95%E5%BC%80%E8%A7%92%E8%AE%A1%E7%AE%97.png?raw=true)
         
-<h3 id='0.4'>0.4 排气角和吸气破入点</h3> 
+<h3 id='2.4'>2.4 排气角</h3> 
     
 #### 1) 排气角不充分条件和最大腔室对数
 >>>>>> ![图1-10 排气角条件](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B6.png?raw=true)
 #### 2) 然后利用该不充分条件和最大腔室对数计算排气角
 > - floor()函数代表向下取整
 >>>>>> ![图1-10 排气角条件2](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B62.png?raw=true)
-#### 2) 吸气破入点的三种定义
+        
+<h3 id='2.5'>2.5 吸气破入点</h3> 
+        
+#### 1) 吸气破入点的三种定义
 > - 第一种定义：固定在动涡盘外壁面，当地展开角固定为为φie-π
 > - 第二种定义：固定在动涡盘外壁面，该点在静涡盘展开结束角的法线与动涡盘外壁面的交点处
 > - 第三种定义：固定在动涡盘外壁面，该点在静涡盘内壁面展开结束角的终点跟静涡盘基圆圆心的连线，与动涡盘外壁面的交点处
 >>>>>> ![图1-23 吸气破入点的三种定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-23%20%E5%90%B8%E6%B0%94%E7%A0%B4%E5%85%A5%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9A%E4%B9%89.png?raw=true)
 
-        
-<h3 id='0.5'>0.5 吸入腔面积体积质心排量计算</h3> 
-    
-#### 1) 三角形和曲线面元的推导
-> - 图中φ1和φ2的位置错了，应该是逆时针布置才对，遵循右手定律
->>>>>> ![图1-11 三角形和曲线面元的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
-#### 2) 质心的推导
-> - 扇形质心在r的2/3位置
->>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-19%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%AE%A1%E7%AE%97.png?raw=true)
-> - 吸入腔静涡旋质心计算 以及密度偏移，要注意的一点是求质心坐标的时候，分子里面的坐标要求是微元的重心坐标，对于矩形微元而言重心坐标即在其中心，但是在扇形微元的时候，重心在其半径的2/3处的地方，造成了所谓的“密度偏移”
-#### 3) 吸入腔外部面积体积质心计算
+<h2 id='3'>三、吸入腔</h2>
+<h3 id='3.1'>3.1 吸入腔外部面积体积质心计算</h3> 
+            
+#### 1) 吸入腔外部面积体积计算
 > - 吸入腔外部涡旋面积体积计算
->>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
-> - 吸入腔外部涡旋质心计算
+>>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-19%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%AE%A1%E7%AE%97.png?raw=true)
+#### 2) 吸入腔静涡旋质心计算
+> -  密度偏移，要注意的一点是求质心坐标的时候，分子里面的坐标要求是微元的重心坐标，对于矩形微元而言重心坐标即在其中心，但是在扇形微元的时候，重心在其半径的2/3处的地方，造成了所谓的“密度偏移”
 >>>>>> ![图1-20 吸入腔静涡旋质心计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
-#### 3) 吸入腔内部面积体积质心计算
+    
+<h3 id='3.2'>3.2 吸入腔内部面积体积质心计算</h3> 
+        
+#### 1) 吸入腔内部面积体积质心计算
 > - 吸入腔内部涡旋面积体积质心计算
 >>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
-> - 吸入腔内部涡旋涡旋面积体积质心计算PartA
+#### 2) 吸入腔内部面积体积质心计算PartA
 >>>>>> ![图1-21 内部涡旋面积体积质心计算part_a](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97part_a.png?raw=true)
-> - 吸入腔内部涡旋涡旋面积体积质心计算PartB
+#### 3) 吸入腔内部涡旋涡旋面积体积质心计算PartB
 >>>>>> ![图1-21 内部涡旋面积体积质心计算part_b](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97part_b.png?raw=true)
-> - 吸入腔内部涡旋涡旋面积体积质心计算PartC
+#### 4) 吸入腔内部涡旋涡旋面积体积质心计算PartC
 >>>>>> ![图1-21 内部涡旋面积体积质心计算part_c](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97part_c.png?raw=true)
-#### 4) 吸入腔总的面积体积质心和排量的计算
+#### 5) 吸入腔总的面积体积质心和排量的计算
 > - 吸入腔总的面积体积质心计算
 > - 压缩机排量定义为动涡盘转一圈后的瞬间吸入腔的总体积
 >>>>>> ![图1-24 吸入腔总的面积体积质心排量计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-24%20%E5%90%B8%E5%85%A5%E8%85%94%E6%80%BB%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%8E%92%E9%87%8F%E8%AE%A1%E7%AE%97.png?raw=true)
-   
+           
+<h3 id='3.3'>3.3 气体力与力矩</h3> 
         
-<h3 id='0.6'>0.6 气体力与力矩的推导</h3> 
-        
-> - 曲线单位法向量的推导
->>>>>> ![图1-14 单位法向量](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-14%20%E5%8D%95%E4%BD%8D%E6%B3%95%E5%90%91%E9%87%8F.png?raw=true)
-> - 单位气体力方向的推导
->>>>>> ![图1-15 单位气体力方向的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
-> - 气体力的推导
+#### 1) 气体力和力矩的推导
 >>>>>> ![图1-17 气体力推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-17%20%E6%B0%94%E4%BD%93%E5%8A%9B%E6%8E%A8%E5%AF%BC.png?raw=true)
-> - 气体力矩方向的推导 中间是叉乘，rO is a vector from (xO, yO)，φie-pi/2之前也讲过，是动涡盘和曲柄销的安装角度
+#### 2) 气体力矩方向的推导
+> - 中间是叉乘，rO is a vector from (xO, yO)，φie-pi/2之前也讲过，是动涡盘和曲柄销的安装角度
 >>>>>> ![图1-18 力矩推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-18%20%E5%8A%9B%E7%9F%A9%E6%8E%A8%E5%AF%BC.png?raw=true)
-    
-#### 1) 三角形和曲线面元的推导
-> - 
+#### 3) 证明过程
+> - 吸气腔水平面力和力矩的计算  但是在计算力矩的时候有点奇怪，按道理来讲，应该有一个因子是关于回转半径ro的，但是这里没有，只有rb平方。
+>>>>>> ![图1-26 吸气腔水平面力和力矩的计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-26%20%E5%90%B8%E6%B0%94%E8%85%94%E6%B0%B4%E5%B9%B3%E9%9D%A2%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9%E7%9A%84%E8%AE%A1%E7%AE%97.png?raw=true)
+#### 4) 吸气腔轴向力的计算
+>>>>>> ![图1-25 吸气腔轴向力的计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-25%20%E5%90%B8%E6%B0%94%E8%85%94%E8%BD%B4%E5%90%91%E5%8A%9B%E7%9A%84%E8%AE%A1%E7%AE%97.png?raw=true) 
+           
+<h3 id='3.4'>3.4 吸气面积腔</h3> 
+        
+#### 1) 定义
+> - 其实就是在花篮中涡旋盘以外的区域
+> - 吸气面积腔，其实这个腔并不是很重要，因为以来这里是用来引导进气，二来这个区域一般有有其他用于加工过程的金属占据着空间
+> - 可以大概认为可以使用对称面积*2的方法，但是这个方法不是绝对精确的，因为吸入破入角对于静涡盘和动涡盘来讲是不相同的 
+>>>>>> ![图1-27 吸气面积腔的定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-25%20%E5%90%B8%E6%B0%94%E8%85%94%E8%BD%B4%E5%90%91%E5%8A%9B%E7%9A%84%E8%AE%A1%E7%AE%97.png?raw=true) 
+>>>>>> ![图1-28 吸气面积腔的面积体积力个力矩](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-25%20%E5%90%B8%E6%B0%94%E8%85%94%E8%BD%B4%E5%90%91%E5%8A%9B%E7%9A%84%E8%AE%A1%E7%AE%97.png?raw=true) 
 
+    
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
 
