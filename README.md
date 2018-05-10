@@ -91,6 +91,11 @@
 > - 图中φ1和φ2的位置错了，应该是逆时针布置才对，遵循右手定律
 >>>>>> ![图1-11 三角形和曲线面元的推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-11%20%E4%B8%89%E8%A7%92%E5%BD%A2%E5%92%8C%E6%9B%B2%E7%BA%BF%E9%9D%A2%E5%85%83%E7%9A%84%E6%8E%A8%E5%AF%BC.jpg?raw=true)
         
+#### 2) 质心的推导
+>>>>>> ![图1-13 扇形质心6](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%836.png?raw=true)
+>>>>>> ![图1-13 扇形质心7](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%837.png?raw=true)
+>>>>>> ![图1-13 扇形质心8](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%838.png?raw=true)
+        
 <h3 id='1.3'>1.3 曲线单位法向量的推导</h3> 
         
 >>>>>> ![图1-14 单位法向量](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-14%20%E5%8D%95%E4%BD%8D%E6%B3%95%E5%90%91%E9%87%8F.png?raw=true)
