@@ -148,9 +148,10 @@
 <h3 id='3.1'>3.1 吸入腔外部面积体积质心计算</h3> 
             
 #### 1) 吸入腔外部面积体积计算
-> - 吸入腔外部涡旋面积体积计算
 >>>>>> ![图1-19 吸入腔静涡旋面积体积计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-19%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%AE%A1%E7%AE%97.png?raw=true)
 #### 2) 吸入腔静涡旋质心计算
+>>>>>> ![图1-13 扇形质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%83.png?raw=true)
+        
 > -  密度偏移，要注意的一点是求质心坐标的时候，分子里面的坐标要求是微元的重心坐标，对于矩形微元而言重心坐标即在其中心，但是在扇形微元的时候，重心在其半径的2/3处的地方，造成了所谓的“密度偏移”
 >>>>>> ![图1-20 吸入腔静涡旋质心计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-20%20%E5%90%B8%E5%85%A5%E8%85%94%E9%9D%99%E6%B6%A1%E6%97%8B%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97.png?raw=true)
     
@@ -189,10 +190,10 @@
 > - 其实就是在花篮中涡旋盘以外的区域
 > - 吸气面积腔，其实这个腔并不是很重要，因为以来这里是用来引导进气，二来这个区域一般有有其他用于加工过程的金属占据着空间
 > - 可以大概认为可以使用对称面积*2的方法，但是这个方法不是绝对精确的，因为吸入破入角对于静涡盘和动涡盘来讲是不相同的 
->>>>>> ![图1-27 吸气面积腔的定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-25%20%E5%90%B8%E6%B0%94%E8%85%94%E8%BD%B4%E5%90%91%E5%8A%9B%E7%9A%84%E8%AE%A1%E7%AE%97.png?raw=true) 
->>>>>> ![图1-28 吸气面积腔的面积体积力个力矩](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-25%20%E5%90%B8%E6%B0%94%E8%85%94%E8%BD%B4%E5%90%91%E5%8A%9B%E7%9A%84%E8%AE%A1%E7%AE%97.png?raw=true) 
+>>>>>> ![图1-27 吸气面积腔的定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-27%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E5%AE%9A%E4%B9%89.png?raw=true) 
+#### 2) 求解面积体积力和力矩
+>>>>>> ![图1-28 吸气面积腔的面积体积力个力矩](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-28%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E5%8A%9B%E4%B8%AA%E5%8A%9B%E7%9F%A9.png?raw=true) 
 
-    
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
 
