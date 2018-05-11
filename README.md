@@ -21,11 +21,18 @@
 #### [2.3 啮合角](#2.3) 
 #### [2.4 排气角](#2.4) 
 #### [2.5 吸气破入角](#2.5) 
+#### [2.6 齿公转半径和壁厚](#2.6)
+#### [2.7 工作腔面积的计算](#2.7)
 ### [三、吸入腔](#3)
 #### [3.1 面积体积质心排量计算](#3.1)
 #### [3.2 吸入腔内部面积体积质心计算](#3.2)
 #### [3.3 气体力与力矩](#3.3)
 #### [3.4 吸气面积腔](#3.4)
+### [四、压缩腔](#4)
+#### [4.1 面积体积质心排量计算](#4.1)
+#### [4.2 吸入腔内部面积体积质心计算](#4.2)
+#### [4.3 气体力与力矩](#4.3)
+#### [4.4 吸气面积腔](#4.4)
 
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
@@ -136,6 +143,9 @@
 <h3 id='2.4'>2.4 排气角</h3> 
     
 #### 1) 排气角不充分条件和最大腔室对数
+> - 其实本质上来讲排气角的条件是啮合角不得小于展开开始角，用这个原则来判断，静涡盘内壁面啮合角φfic=φe-θ-2πNc;动涡盘外壁面啮合角φfic=φe-π-θ-2πNc;
+> - 如果采用静涡盘内壁面啮合角φfic = φe-θ-2πNc，则由于φfic > φfis，即φfis < φe-θ-2πNc
+> - 如果采用动涡盘内壁面啮合角φoic = φe-π-θ-2πNc，则由于φoic > φois，即φois < φe-π-θ-2πNc
 >>>>>> ![图1-10 排气角条件](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-10%20%E6%8E%92%E6%B0%94%E8%A7%92%E6%9D%A1%E4%BB%B6.png?raw=true)
 #### 2) 然后利用该不充分条件和最大腔室对数计算排气角
 > - floor()函数代表向下取整
@@ -148,6 +158,23 @@
 > - 第二种定义：固定在动涡盘外壁面，该点在静涡盘展开结束角的法线与动涡盘外壁面的交点处
 > - 第三种定义：固定在动涡盘外壁面，该点在静涡盘内壁面展开结束角的终点跟静涡盘基圆圆心的连线，与动涡盘外壁面的交点处
 >>>>>> ![图1-23 吸气破入点的三种定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-23%20%E5%90%B8%E6%B0%94%E7%A0%B4%E5%85%A5%E7%82%B9%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9A%E4%B9%89.png?raw=true)
+        
+<h3 id='2.6'>2.6 公转半径和壁厚</h3> 
+     
+#### 1) ro orbiting radius 公转半径
+> - 公转半径只是涡盘基圆半径和内外表面发生角的函数
+>>>>>> ![图1-3 公转半径的定义c](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-3%20%E5%85%AC%E8%BD%AC%E5%8D%8A%E5%BE%84%E7%9A%84%E5%AE%9A%E4%B9%89c.png?raw=true)
+#### 1) t 壁厚
+> - t The thickness of the scroll 涡旋的厚度 t=ts = rb*(phi_i0 - phi_o0)，涡旋盘厚度通常为5毫米量级。 
+>>>>>> ![图1-1 涡旋的内外表面](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-1%20%E6%B6%A1%E6%97%8B%E7%9A%84%E5%86%85%E5%A4%96%E8%A1%A8%E9%9D%A2.png?raw=true)
+        
+<h3 id='2.6'>2.7 工作腔面积的计算</h3> 
+     
+#### 1) 利用刘老师书上的方法，但是壁厚这里我采用了文献的方法
+>>>>>> ![图1-29 工作腔面积的计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-3%20%E5%85%AC%E8%BD%AC%E5%8D%8A%E5%BE%84%E7%9A%84%E5%AE%9A%E4%B9%89c.png?raw=true)
+        
+------
+        
 
 <h2 id='3'>三、吸入腔</h2>
 <h3 id='3.1'>3.1 吸入腔外部面积体积质心计算</h3> 
@@ -173,7 +200,7 @@
 >>>>>> ![图1-21 内部涡旋面积体积质心计算part_c](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-21%20%E5%86%85%E9%83%A8%E6%B6%A1%E6%97%8B%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E8%AE%A1%E7%AE%97part_c.png?raw=true)
 #### 5) 吸入腔总的面积体积质心和排量的计算
 > - 吸入腔总的面积体积质心计算
-> - 压缩机排量定义为动涡盘转一圈后的瞬间吸入腔的总体积
+> - 压缩机排量定义为动涡盘转一圈后的瞬间吸入腔的总体积，但是这个我没有推过，不知道排量的公式对还是错
 >>>>>> ![图1-24 吸入腔总的面积体积质心排量计算](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-24%20%E5%90%B8%E5%85%A5%E8%85%94%E6%80%BB%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%8E%92%E9%87%8F%E8%AE%A1%E7%AE%97.png?raw=true)
            
 <h3 id='3.3'>3.3 气体力与力矩</h3> 
@@ -198,7 +225,27 @@
 >>>>>> ![图1-27 吸气面积腔的定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-27%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E5%AE%9A%E4%B9%89.png?raw=true) 
 #### 2) 求解面积体积力和力矩
 >>>>>> ![图1-28 吸气面积腔的面积体积力个力矩](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-28%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E5%8A%9B%E4%B8%AA%E5%8A%9B%E7%9F%A9.png?raw=true) 
+        
+------
+        
+    
+<h2 id='4'>四、压缩腔</h2>
+<h3 id='3.1'>3.1 压缩腔面积体积计算</h3>     
 
+#### 1) 文献中的方法，我对内部面积的求解方法心存怀疑
+>>>>>> ![图4-2 压缩腔面积计算_文献](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-28%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E5%8A%9B%E4%B8%AA%E5%8A%9B%E7%9F%A9.png?raw=true) 
+#### 2) 刘振全老师的方法，我对与直接在内部区域的展开角减π的做法心存怀疑
+>>>>>> ![图4-2 压缩腔面积计算_刘老师.jpg](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-28%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E5%8A%9B%E4%B8%AA%E5%8A%9B%E7%9F%A9.png?raw=true)
+#### 3) 我把前面两种方法结合在一起后，做出的结果跟文献中的形式基本相同
+>>>>>> ![图4-2 压缩腔面积计算_冰红茶](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-28%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E5%8A%9B%E4%B8%AA%E5%8A%9B%E7%9F%A9.png?raw=true)
+        
+<h3 id='3.2'>3.2 压缩比</h3>     
+        
+> - 文献中的方法，我试过是正确的
+>>>>>> ![图4-3 压缩比1](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-28%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E5%8A%9B%E4%B8%AA%E5%8A%9B%E7%9F%A9.png?raw=true)
+> - 我的方法，形式跟文献的基本一致
+>>>>>> ![图4-3 压缩比2](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-28%20%E5%90%B8%E6%B0%94%E9%9D%A2%E7%A7%AF%E8%85%94%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E5%8A%9B%E4%B8%AA%E5%8A%9B%E7%9F%A9.png?raw=true)
+ 
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
 
