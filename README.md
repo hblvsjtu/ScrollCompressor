@@ -113,7 +113,7 @@
                 
 <h3 id='1.5'>1.5 基本三角函数基本公式</h3> 
         
->>>>>> ![图1-30 基本三角函数基本公式](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-15%20%E5%8D%95%E4%BD%8D%E6%B0%94%E4%BD%93%E5%8A%9B%E6%96%B9%E5%90%91%E7%9A%84%E6%8E%A8%E5%AF%BC.png?raw=true)
+>>>>>> ![图1-30 基本三角函数基本公式](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-30%20%E5%9F%BA%E6%9C%AC%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%9F%BA%E6%9C%AC%E5%85%AC%E5%BC%8F.jpg?raw=true)
         
 ------
         
@@ -253,7 +253,7 @@
 <h3 id='4.3'>4.3 压缩腔的质心</h3>     
         
 > - 关于压缩腔的质心的证明实在太麻烦了，这里我没有去验证
->>>>>> ![图4-4 压缩腔的质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-3%20%E5%8E%8B%E7%BC%A9%E6%AF%941.png?raw=true)
+>>>>>> ![图4-4 压缩腔的质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-4%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E8%B4%A8%E5%BF%83.png?raw=true)
 
  
 <h2 id='6'>六、PDSim.scroll package</h2>
