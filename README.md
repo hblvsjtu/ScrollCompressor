@@ -34,6 +34,12 @@
 #### [4.2 压缩比](#4.2)
 #### [4.3 压缩腔的质心](#4.3)
 #### [4.4 压缩腔的质心](#4.4)
+### [四、排气腔](#4)
+#### [5.1 压缩腔面积体积计算](#5.1)
+#### [5.2 d1腔体积的定义和面积体积质心力和力矩求解](#5.2)
+#### [5.3 压缩腔的质心](#5.3)
+#### [5.4 压缩腔的质心](#5.4)
+
 
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
@@ -108,7 +114,7 @@
 #### 4) 圆渐开线面积质心求解
 >>>>>> ![图1-32 圆渐开线面积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-32%20%E5%9C%86%E6%B8%90%E5%BC%80%E7%BA%BF%E9%9D%A2%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true)
 #### 5) 圆渐开线基圆三角形面积求解
->>>>>> ![图1-33 圆渐开线基圆三角形面积求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-32%20%E5%9C%86%E6%B8%90%E5%BC%80%E7%BA%BF%E9%9D%A2%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true)
+>>>>>> ![图1-33 圆渐开线基圆三角形面积求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-33%20%E5%9C%86%E6%B8%90%E5%BC%80%E7%BA%BF%E5%9F%BA%E5%9C%86%E4%B8%89%E8%A7%92%E5%BD%A2%E9%9D%A2%E7%A7%AF%E6%B1%82%E8%A7%A3.jpg?raw=true)
         
 <h3 id='1.3'>1.3 曲线单位法向量的推导</h3> 
         
@@ -277,36 +283,40 @@
 > - 一般过了排气角π/2之后才使得d1和dd压力相等
 >>>>>> ![图4-6 压缩腔演化图](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
         
-<h3 id='5.1'>5.1 d1腔体积的定义和面积体积质心求解</h3>     
+<h3 id='5.2'>5.2 d1腔体积的定义和面积体积质心求解</h3>     
         
 #### 1) d1腔体积的定义和面积体积质心求解
 > - d1和dd腔的分界线是由动盘的φo和静盘的φos+π连线。目的是保证在排气角处分界线的长度为0
 > - 面积求解的套路一般都是把动涡盘的参考系转化为静涡盘的参考系
->>>>>> ![图4-8 d1腔面积求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
+>>>>>> ![图4-8 d1腔面积求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-8%20d1%E8%85%94%E9%9D%A2%E7%A7%AF%E6%B1%82%E8%A7%A3.png?raw=true)
 > - Ad1 = AO - A1 
 > - A1 = A1a + A1b + A1c + A1d   A1将关于动涡盘的面积转化到静涡盘上
 > - Ad1 = AO - (A1a + A1b + A1c + A1d)
 #### 2) A0的面积体积质心求解
 > - 转化为静涡盘的参考系，排气角看起来为什么要加上π，但是你从动涡盘的角度去看，转化为动涡盘的参考系展开角是需要减去π的，此时就剩下φos - φo0了
->>>>>> ![图4-10 A0的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94)
+>>>>>> ![图4-10 A0的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-10%20A0%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true)
 #### 3) A1a的面积体积质心求解
 > - 动涡盘上的面积通过旋转和平移搬到静涡盘上，展开角不变
->>>>>> ![图4-9 A1a的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
+>>>>>> ![图4-9 A1a的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-9%20A1a%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true)
 #### 4) A1b的面积体积质心求解
 > - 动涡盘上的面积通过旋转和平移搬到静涡盘上，展开角不变，运用圆渐开线基圆三角形面积求解的结论可以直接得到答案
->>>>>> ![图4-12 A1b的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
+>>>>>> ![图4-12 A1b的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-12%20A1b%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true)
 #### 5) A1c的面积体积质心求解
 > - 运用圆渐开线基圆三角形面积求解的结论可以直接得到答案
->>>>>> ![图4-13 A1c的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
+>>>>>> ![图4-13 A1c的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-13%20A1c%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.jpg?raw=true)
 #### 6) A1d的面积体积质心求解
 > - V1d,d1这个三角形比较麻烦，因为它的一个顶点在静涡盘上，另一个顶点在动涡盘上，算起来比较麻烦，这里我就不推导了
->>>>>> ![图4-11 A1d的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
+>>>>>> ![图4-11 A1d的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-11%20A1d%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true)
 #### 7) A1的面积体积质心求解汇总
 > - A1 = A1a + A1b + A1c + A1d
->>>>>> ![图4-14 A1的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94) 
+>>>>>> ![图4-14 A1的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-14%20A1%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true) 
 #### 8) Ad1的面积体积质心求解汇总
 > - Ad1 = AO - A1
->>>>>> ![图4-15 Ad1的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94) 
+>>>>>> ![图4-15 Ad1的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-15%20Ad1%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true) 
+#### 9) Ad1的力和力矩求解
+> - 还是以前的套路
+>>>>>> ![图4-16 Ad1的力和力矩求解.png](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-15%20Ad1%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true) 
+>>>>>> 
 
  
 <h2 id='6'>六、PDSim.scroll package</h2>
