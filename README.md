@@ -105,6 +105,8 @@
 >>>>>> ![图1-13 扇形质心8](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%838.png?raw=true)
 #### 3) 圆渐开线一般面积积分
 >>>>>> ![图1-31 圆渐开线一般面积积分](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-31%20%E5%9C%86%E6%B8%90%E5%BC%80%E7%BA%BF%E4%B8%80%E8%88%AC%E9%9D%A2%E7%A7%AF%E7%A7%AF%E5%88%86.jpg?raw=true)
+#### 4) 圆渐开线面积质心求解
+>>>>>> ![图1-32 圆渐开线面积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-32%20%E5%9C%86%E6%B8%90%E5%BC%80%E7%BA%BF%E9%9D%A2%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.jpg?raw=true)
         
 <h3 id='1.3'>1.3 曲线单位法向量的推导</h3> 
         
