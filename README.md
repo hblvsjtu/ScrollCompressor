@@ -103,6 +103,8 @@
 >>>>>> ![图1-13 扇形质心6](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%836.png?raw=true)
 >>>>>> ![图1-13 扇形质心7](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%837.png?raw=true)
 >>>>>> ![图1-13 扇形质心8](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-13%20%E6%89%87%E5%BD%A2%E8%B4%A8%E5%BF%838.png?raw=true)
+#### 3) 圆渐开线一般面积积分
+>>>>>> ![图1-31 圆渐开线一般面积积分](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE1-31%20%E5%9C%86%E6%B8%90%E5%BC%80%E7%BA%BF%E4%B8%80%E8%88%AC%E9%9D%A2%E7%A7%AF%E7%A7%AF%E5%88%86.jpg?raw=true)
         
 <h3 id='1.3'>1.3 曲线单位法向量的推导</h3> 
         
@@ -260,6 +262,19 @@
         
 > - 这个没什么好说的，跟吸入腔的计算方法类似
 >>>>>> ![图4-5 压缩腔的力和力矩](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
+        
+------
+        
+    
+<h2 id='5'>五、排气腔</h2>
+<h3 id='5.1'>5.1 相关定义</h3>     
+
+#### 1) 排期腔的演化
+> - 一般过了排气角π/2之后才使得d1和dd压力相等
+>>>>>> ![图4-6 压缩腔演化图](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
+#### 2) d1腔体积的定义
+> - d1和dd腔的分界线是由动盘的φo和静盘的φos+π连线。目的是保证在排气角处分界线的长度为0
+>>>>>> ![图4-7 d1腔的定义](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
 
  
 <h2 id='6'>六、PDSim.scroll package</h2>
