@@ -316,9 +316,21 @@
         
 <h3 id='5.3'>5.3 dd腔体积的定义和面积体积质心力和力矩求解</h3>     
         
-#### 1) 排期腔的演化
-> - 一般过了排气角π/2之后才使得d1和dd压力相等
->>>>>> ![图4-6 压缩腔演化图]()
+#### 1) dd的形成曲线
+> - dd腔的定义比较麻烦，因为它的形成曲线有不同的类型
+> - 从φ0~φs这一段涡旋是用来形成排气区域的组合曲线的
+> - 组合曲线满足四个条件
+>> - 1，曲线必须在φis处跟涡旋内壁相切；
+>> - 2，曲线必须在φos处跟涡旋外壁相切；
+>> - 3，曲线在运行过程中不会使得动静涡盘相碰；
+>> - 4，曲线必须经过涡旋的内外φs点
+>>>>>> ![图4-17 dd腔的组合曲线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
+> - 曲线类型
+>> - 第一种组合曲线类型——弧线-直线-弧线
+>>>>>> ![图4-18 dd腔的组合曲线_直线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-18%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF_%E7%9B%B4%E7%BA%BF.png?raw=true) 
+>> - 第二种组合曲线类型——弧线-弧线-弧线
+>>>>>> ![图4-19 dd腔的组合曲线_弧线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-18%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF_%E5%BC%A7%E7%BA%BF.png?raw=true) 
+
  
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
