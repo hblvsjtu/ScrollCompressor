@@ -33,6 +33,7 @@
 #### [4.1 压缩腔面积体积计算](#4.1)
 #### [4.2 压缩比](#4.2)
 #### [4.3 压缩腔的质心](#4.3)
+#### [4.4 压缩腔的质心](#4.4)
 
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
@@ -254,6 +255,11 @@
         
 > - 关于压缩腔的质心的证明实在太麻烦了，这里我没有去验证
 >>>>>> ![图4-4 压缩腔的质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-4%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E8%B4%A8%E5%BF%83.png?raw=true)
+        
+<h3 id='4.4'>4.4 压缩腔的质心</h3>     
+        
+> - 这个没什么好说的，跟吸入腔的计算方法类似
+>>>>>> ![图4-5 压缩腔的力和力矩](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
 
  
 <h2 id='6'>六、PDSim.scroll package</h2>
