@@ -276,9 +276,9 @@
 <h2 id='5'>五、排气腔</h2>
 <h3 id='5.1'>5.1 相关定义</h3>     
 
-#### 1) 排期腔的演化
+#### 1) 排气腔的演化
 > - 一般过了排气角π/2之后才使得d1和dd压力相等
->>>>>> ![图4-6 压缩腔演化图](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-5%20%E5%8E%8B%E7%BC%A9%E8%85%94%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9.png?raw=true)
+>>>>>> ![图4-6 压缩腔演化图](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-6%20%E5%8E%8B%E7%BC%A9%E8%85%94%E6%BC%94%E5%8C%96%E5%9B%BE.png?raw=true)
         
 <h3 id='5.2'>5.2 d1腔体积的定义和面积体积质心求解</h3>     
         
