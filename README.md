@@ -37,10 +37,7 @@
 ### [四、排气腔](#4)
 #### [5.1 压缩腔面积体积计算](#5.1)
 #### [5.2 d1腔体积的定义和面积体积质心力和力矩求解](#5.2)
-#### [5.3 压缩腔的质心](#5.3)
-#### [5.4 压缩腔的质心](#5.4)
-
-
+#### [5.3 dd腔体积的定义和面积体积质心力和力矩求解](#5.3)
 ### [一、PDSim.core package](#1)
 #### [1.1 PDSim.core.bearings module](#1.1)
 #### [1.2 PDSim.core.callbacks module](#1.2)
@@ -315,9 +312,13 @@
 >>>>>> ![图4-15 Ad1的面积体积质心求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-15%20Ad1%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true) 
 #### 9) Ad1的力和力矩求解
 > - 还是以前的套路
->>>>>> ![图4-16 Ad1的力和力矩求解.png](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-15%20Ad1%E7%9A%84%E9%9D%A2%E7%A7%AF%E4%BD%93%E7%A7%AF%E8%B4%A8%E5%BF%83%E6%B1%82%E8%A7%A3.png?raw=true) 
->>>>>> 
-
+>>>>>> ![图4-16 Ad1的力和力矩求解.png](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-16%20Ad1%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9%E6%B1%82%E8%A7%A3.png?raw=true) 
+        
+<h3 id='5.3'>5.3 dd腔体积的定义和面积体积质心力和力矩求解</h3>     
+        
+#### 1) 排期腔的演化
+> - 一般过了排气角π/2之后才使得d1和dd压力相等
+>>>>>> ![图4-6 压缩腔演化图]()
  
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
