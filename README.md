@@ -325,8 +325,12 @@
 >> - 3，曲线在运行过程中不会使得动静涡盘相碰；
 >> - 4，曲线必须经过涡旋的内外φs点
 >>>>>> ![图4-17 dd腔的组合曲线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
+> - 组合曲线圆心坐标
+>>>>>> ![图4-19 dd腔的组合曲线圆心坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
+> - 组合曲线圆心半径
+>>>>>> ![图4-20 dd腔的组合曲线圆心半径](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
 > - 曲线类型
->> - 第一种组合曲线类型——弧线-直线-弧线
+>> - 第一种组合曲线类型——弧线-直线-弧线 ra2是连接外涡旋壁面的圆弧
 >>>>>> ![图4-18 dd腔的组合曲线_直线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-18%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF_%E7%9B%B4%E7%BA%BF.png?raw=true) 
 >> - 第二种组合曲线类型——弧线-弧线-弧线
 >>>>>> ![图4-19 dd腔的组合曲线_弧线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-18%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF_%E5%BC%A7%E7%BA%BF.png?raw=true) 
