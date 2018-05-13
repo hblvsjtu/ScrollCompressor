@@ -34,50 +34,11 @@
 #### [4.2 压缩比](#4.2)
 #### [4.3 压缩腔的质心](#4.3)
 #### [4.4 压缩腔的力和力矩](#4.4)
-### [四、排气腔](#4)
+### [五、排气腔](#4)
 #### [5.1 压缩腔面积体积计算](#5.1)
 #### [5.2 d1腔体积的定义和面积体积质心力和力矩求解](#5.2)
 #### [5.3 dd腔体积的定义和面积体积质心力和力矩求解](#5.3)
-### [一、PDSim.core package](#1)
-#### [1.1 PDSim.core.bearings module](#1.1)
-#### [1.2 PDSim.core.callbacks module](#1.2)
-#### [1.3 PDSim.core.containers module](#1.3)
-#### [1.4 PDSim.core.core module](#1.4)
-#### [1.5 PDSim.core.integrators module](#1.5)
-#### [1.6 PDSim.core.journal_bearing module](#1.6)
-#### [1.7 PDSim.core.mobility module](#1.7)
-#### [1.8 PDSim.core.motor module](#1.8)
-#### [1.9 module contents](#1.9)
-        
-### [二、PDSim.flow package](#2)
-#### [2.1 PDSim.flow.fanno module](#2.1)
-#### [2.2 PDSim.flow.flow module](#2.2)
-#### [2.3 PDSim.flow.flow_models module](#2.3)
-#### [2.4 module contents](#2.4)
-        
-### [三、PDSim.misc package](#3)
-#### [3.1 PDSim.misc.clipper package](#3.1)
-##### [3.1.1 PDSim.misc.clipper.main module](#3.1.1)
-##### [3.1.2 PDSim.misc.clipper.pyclipper module](#3.1.2)
-##### [3.1.3 PDSim.misc.clipper.setup module](#3.1.3)
-##### [3.1.4 module contents](#3.1.4)
-#### [3.2 PDSim.misc.datatypes module](#3.2)
-#### [3.3 PDSim.misc.error_bar module](#3.3)
-#### [3.4 PDSim.misc.hdf5 module](#3.4)
-#### [3.5 PDSim.misc.polymath_sample module](#3.5)
-#### [3.6 PDSim.misc.scipylike module](#3.6)
-#### [3.7 PDSim.misc.solvers module](#3.7)
-#### [3.8 PDSim.misc.stl_utilities module](#3.8)
-#### [3.9 module contents](#3.9)
-        
-### [四、PDSim.plot package](#4)
-#### [4.1 PDSim.plot.plots module](#4.1)
-#### [4.2 module contents](#4.2)
-        
-### [五、PDSim.recip package](#5)
-#### [5.1 PDSim.recip.core module](#5.1)
-#### [5.2 module contents](#5.2)
-        
+#### [5.4 泄漏的流动面积和主流动路径](#5.4)     
 ### [六、PDSim.scroll package](#6)
 #### [6.1 PDSim.scroll.common_scroll_geo module](#6.1)
 #### [6.2 PDSim.scroll.core module](#6.2)
@@ -314,7 +275,7 @@
 > - 还是以前的套路
 >>>>>> ![图4-16 Ad1的力和力矩求解.png](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-16%20Ad1%E7%9A%84%E5%8A%9B%E5%92%8C%E5%8A%9B%E7%9F%A9%E6%B1%82%E8%A7%A3.png?raw=true) 
         
-<h3 id='5.3'>5.3 dd腔体积的定义和面积体积质心力和力矩求解</h3>     
+<h3 id='5.3'>5.3 dd腔</h3>     
         
 #### 1) dd的形成曲线
 > - dd腔的定义比较麻烦，因为它的形成曲线有不同的类型
@@ -325,16 +286,25 @@
 >> - 3，曲线在运行过程中不会使得动静涡盘相碰；
 >> - 4，曲线必须经过涡旋的内外φs点
 >>>>>> ![图4-17 dd腔的组合曲线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
-> - 组合曲线圆心坐标
->>>>>> ![图4-19 dd腔的组合曲线圆心坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
-> - 组合曲线圆心半径
->>>>>> ![图4-20 dd腔的组合曲线圆心半径](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
 > - 曲线类型
 >> - 第一种组合曲线类型——弧线-直线-弧线 ra2是连接外涡旋壁面的圆弧
 >>>>>> ![图4-18 dd腔的组合曲线_直线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-18%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF_%E7%9B%B4%E7%BA%BF.png?raw=true) 
 >> - 第二种组合曲线类型——弧线-弧线-弧线
 >>>>>> ![图4-19 dd腔的组合曲线_弧线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-18%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF_%E5%BC%A7%E7%BA%BF.png?raw=true) 
-
+#### 2) 两段弧线组合曲线
+>>>>>> ![图4-17 dd腔的组合曲线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
+> - 组合曲线圆心坐标
+>>>>>> ![图4-19 dd腔的组合曲线圆心坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-19%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%9D%90%E6%A0%87.png?raw=true) 
+> - 组合曲线圆心半径
+>>>>>> ![图4-20 dd腔的组合曲线圆心半径](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-20%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%8D%8A%E5%BE%84.png?raw=true)     
+#### 3) 弧线-直线-弧线组合曲线
+#### 4) dd腔体积的定义和面积体积质心力和力矩求解
+        
+<h3 id='5.4'>5.4 泄漏的流动面积和主流动路径</h3>     
+        
+------
+        
+         
  
 <h2 id='6'>六、PDSim.scroll package</h2>
 <h3 id='6.1'>6.1 PDSim.scroll.common_scroll_geo module</h3>  
