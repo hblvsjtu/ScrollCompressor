@@ -312,25 +312,43 @@
         
 #### 4) dd腔质心
 > - dd腔质心
->>>>>> ![图4-30 dd腔质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%85%AC%E5%88%87%E7%BA%BF%E6%8E%A8%E5%AF%BC.jpg?raw=true)
+>>>>>> ![图4-30 dd腔质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-30%20dd%E8%85%94%E8%B4%A8%E5%BF%83.png?raw=true)
 > - dd腔面积 
         
                 Add = 2(AOa;dd + AOb;dd + AOc;dd + AIa;dd + AIb;dd)
 > - VOc;dd是由于φi ≠ φos + π，一个不完美的啮合所造成的间隙
 #### 5) VOa;dd面积
 > - ta1,1指的是ACR1的公切点所在的转角
->>>>>> ![图4-32 VOa;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8
+>>>>>> ![图4-32 VOa;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-32%20VOa;dd%E9%9D%A2%E7%A7%AF.png?raw=true)
 #### 6) VOb;dd面积
->>>>>> ![图4-33 VOb;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8)    
+>>>>>> ![图4-33 VOb;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-33%20VOb;dd%E9%9D%A2%E7%A7%AF.png?raw=true)    
 #### 7) VOc;dd面积
->>>>>> ![图4-34 VOc;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8)  
+>>>>>> ![图4-34 VOc;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-34%20VOc;dd%E9%9D%A2%E7%A7%AF.png?raw=true)  
 #### 8) AIa;dd面积
->>>>>> ![图4-35 VIa;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8)  
+>>>>>> ![图4-35 VIa;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-35%20VIa;dd%E9%9D%A2%E7%A7%AF.png?raw=true)  
 #### 9) AIb;dd面积
->>>>>> ![图4-36 VIb;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8) 
->>>>>> 
+>>>>>> ![图4-36 VIb;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-36%20VIb;dd%E9%9D%A2%E7%A7%AF.png?raw=true) 
+
 <h3 id='5.4'>5.4 泄漏的流动面积和主流动路径</h3>     
         
+#### 1) 概况
+> - 现有泄漏长度计算的主要问题是，它们对于处理任意数量的压缩室不是足够通用的。
+#### 2) Radial Leakages 径向泄漏
+> - 径向泄漏 = 泄漏弧长 * 径向gap宽度radial
+> - 泄漏面积的定义依赖于给定曲柄转角下压缩腔的对数
+> - 静涡盘展开角在φie~φie-θd的范围内存在啮合点时才会有压缩腔，压缩腔的对数Nc,max=floor\[(φie-π-φis)/2π\]，或者=啮合点个数/2-1，这是应为要形成压缩腔至少头跟尾各需要啮合点
+>>>>>> ![图5-1 压缩腔与啮合点的关系](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-36%20VIb;dd%E9%9D%A2%E7%A7%AF.png?raw=true)
+> - 弧线长的求解
+>>>>>> ![图5-2 弧线长的求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-36%20VIb;dd%E9%9D%A2%E7%A7%AF.png?raw=true)
+> - 
+#### 3) Flank Leakage 侧面泄漏
+> - 三种情况
+>> - 吸气腔和压缩腔
+>> - 压缩腔与压缩腔
+>> - 压缩腔和排气腔 
+> - 计算的时候需要知道动静涡盘的径向间隙，然后再乘以齿高
+#### 4) 排气孔
+> - 三种情况
 ------
         
          
