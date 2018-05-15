@@ -337,9 +337,9 @@
 > - 径向泄漏 = 泄漏弧长 * 径向gap宽度radial
 > - 泄漏面积的定义依赖于给定曲柄转角下压缩腔的对数
 > - 静涡盘展开角在φie~φie-θd的范围内存在啮合点时才会有压缩腔，压缩腔的对数Nc,max=floor\[(φie-π-φis)/2π\]，或者=啮合点个数/2-1，这是应为要形成压缩腔至少头跟尾各需要啮合点
->>>>>> ![图5-1 压缩腔与啮合点的关系](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-36%20VIb;dd%E9%9D%A2%E7%A7%AF.png?raw=true)
+>>>>>> ![图5-1 压缩腔与啮合点的关系](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE5-1%20%E5%8E%8B%E7%BC%A9%E8%85%94%E4%B8%8E%E5%95%AE%E5%90%88%E7%82%B9%E7%9A%84%E5%85%B3%E7%B3%BB.png?raw=true)
 > - 弧线长的求解
->>>>>> ![图5-2 弧线长的求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-36%20VIb;dd%E9%9D%A2%E7%A7%AF.png?raw=true)
+>>>>>> ![图5-2 弧线长的求解](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE5-2%20%E5%BC%A7%E7%BA%BF%E9%95%BF%E7%9A%84%E6%B1%82%E8%A7%A3.png?raw=true)
 > - 
 #### 3) Flank Leakage 侧面泄漏
 > - 三种情况
