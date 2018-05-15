@@ -297,6 +297,15 @@
 >>>>>> ![图4-19 dd腔的组合曲线圆心坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-19%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%9D%90%E6%A0%87.png?raw=true) 
 > - 组合曲线圆心半径
 >>>>>> ![图4-20 dd腔的组合曲线圆心半径](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-20%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%8D%8A%E5%BE%84.png?raw=true)     
+> - 如果要保持啮合状态的话必须要满足的条件：φis = φos + π 否则后面还没有到达排气角，动涡盘就会被抬起，动静涡盘就不会再贴合
+> - 组合曲线啮合的第一种情况：弧线1的圆心在静盘基圆圆心，弧线2的圆心在动涡盘基圆圆心，此时有ra1 = ra2 + ro
+>>>>>> ![图4-23 组合曲线啮合的第一种情况](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-20%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%8D%8A%E5%BE%84.png?raw=true)
+>>>>>> ![图4-26 组合曲线啮合的第一种情况ra2max](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-20%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%8D%8A%E5%BE%84.png?raw=true)
+> - 组合曲线啮合的第二种情况：弧线1的圆心偏离静盘基圆圆心，弧线2的圆心在动涡盘基圆圆心，此时有ra1 = ra2 + ro
+>>>>>> ![图4-24 组合曲线啮合的第二种情况](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-20%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%8D%8A%E5%BE%84.png?raw=true)
+>>>>>> ![图4-27 组合曲线啮合的第二种情况ra2max](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-20%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%8D%8A%E5%BE%84.png?raw=true)
+
+> - 
 #### 3) 弧线-直线-弧线组合曲线
 #### 4) dd腔体积的定义和面积体积质心力和力矩求解
         
