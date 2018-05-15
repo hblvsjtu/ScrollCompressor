@@ -291,7 +291,7 @@
 >>>>>> ![图4-18 dd腔的组合曲线_直线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-18%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF_%E7%9B%B4%E7%BA%BF.png?raw=true) 
 >> - 第二种组合曲线类型——弧线-弧线-弧线
 >>>>>> ![图4-19 dd腔的组合曲线_弧线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-18%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF_%E5%BC%A7%E7%BA%BF.png?raw=true) 
-#### 2) 两段弧线组合曲线
+#### 2) two-arc组合曲线
 >>>>>> ![图4-17 dd腔的组合曲线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-17%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true) 
 > - 组合曲线圆心坐标
 >>>>>> ![图4-19 dd腔的组合曲线圆心坐标](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-19%20dd%E8%85%94%E7%9A%84%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%9C%86%E5%BF%83%E5%9D%90%E6%A0%87.png?raw=true) 
@@ -304,14 +304,31 @@
 > - 组合曲线啮合的第二种情况：弧线1的圆心偏离静盘基圆圆心，弧线2的圆心在动涡盘基圆圆心，此时有ra1 = ra2 + ro
 >>>>>> ![图4-24 组合曲线啮合的第二种情况](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-24%20%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%95%AE%E5%90%88%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%83%85%E5%86%B5.png?raw=true)
 >>>>>> ![图4-27 组合曲线啮合的第二种情况ra2max](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-26%20%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%95%AE%E5%90%88%E7%9A%84%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5ra2max.png?raw=true)
-
-#### 3) 弧线-直线-弧线组合曲线
-> - 可以求出公切线的长度和公切点的坐标
->>>>>> ![图4-28 弧线-直线-弧线组合曲线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-26%20%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%95%AE%E5%90%88%E7%9A%84%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5ra2max.png?raw=true)
->>>>>> ![图4-29 弧线-直线-弧线组合曲线公切线推导]()
-
-#### 4) dd腔体积的定义和面积体积质心力和力矩求解
         
+#### 3) arc-line-arc组合曲线
+> - 可以求出公切线的长度和公切点的坐标
+>>>>>> ![图4-28 弧线-直线-弧线组合曲线](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-28%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF.png?raw=true)
+>>>>>> ![图4-29 弧线-直线-弧线组合曲线公切线推导](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%85%AC%E5%88%87%E7%BA%BF%E6%8E%A8%E5%AF%BC.jpg?raw=true)
+        
+#### 4) dd腔质心
+> - dd腔质心
+>>>>>> ![图4-30 dd腔质心](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF%E5%85%AC%E5%88%87%E7%BA%BF%E6%8E%A8%E5%AF%BC.jpg?raw=true)
+> - dd腔面积 
+        
+                Add = 2(AOa;dd + AOb;dd + AOc;dd + AIa;dd + AIb;dd)
+> - VOc;dd是由于φi ≠ φos + π，一个不完美的啮合所造成的间隙
+#### 5) VOa;dd面积
+> - ta1,1指的是ACR1的公切点所在的转角
+>>>>>> ![图4-32 VOa;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8
+#### 6) VOb;dd面积
+>>>>>> ![图4-33 VOb;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8)    
+#### 7) VOc;dd面积
+>>>>>> ![图4-34 VOc;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8)  
+#### 8) AIa;dd面积
+>>>>>> ![图4-35 VIa;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8)  
+#### 9) AIb;dd面积
+>>>>>> ![图4-36 VIb;dd面积](https://github.com/hblvsjtu/ScrollCompressor/blob/master/picture/%E5%9B%BE4-29%20%E5%BC%A7%E7%BA%BF-%E7%9B%B4%E7%BA%BF-%E5%BC%A7%E7%BA%BF%E7%BB%84%E5%90%8) 
+>>>>>> 
 <h3 id='5.4'>5.4 泄漏的流动面积和主流动路径</h3>     
         
 ------
